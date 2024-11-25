@@ -1,8 +1,9 @@
+import { BusinessCard } from "@/features/business/components/buisness-card";
 import Image from "next/image";
 export default function Page() {
   return (
     <>
-      <section className="hero p-8">
+      <section className="hero p-4">
         <div className="hero-content flex flex-col text-center md:flex-row">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold"> Welcome to Includio!</h1>
@@ -19,8 +20,14 @@ export default function Page() {
           />
         </div>
       </section>
-      <section className="flex flex-col justify-center items-center mt-12">
-        <h2 className="text-3xl font-bold">Your Businesses</h2>
+      <section className="flex flex-col justify-center items-center mt-12 bg-green-50 py-6 pt-12">
+        <h2 className="text-4xl font-bold mb-6">Your Businesses</h2>
+        <button className="btn btn-secondary h-14 text-base rounded-lg flex items-center">
+          <span className="mr-1 text-lg">+</span>Add a new business
+        </button>
+        <BusinessCard />
+        <BusinessCard />
+        <BusinessCard />
       </section>
     </>
   );

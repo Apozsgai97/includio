@@ -12,17 +12,17 @@ export default function layout({ children }: { children: React.ReactNode }) {
         <div className="flex-none">
           <ul className="hidden md:flex menu menu-horizontal px-1 font-bold">
             <li className="px-2">
-              <Link className="hover:bg-primary" href="\businesses\">
+              <Link className="hover:bg-green-100" href="\businesses\">
                 Businesses
               </Link>
             </li>
             <li>
-              <Link className="hover:bg-primary" href="/">
+              <Link className="hover:bg-green-100" href="/">
                 Index
               </Link>
             </li>
             <li>
-              <Link className="hover:bg-primary" href="/">
+              <Link className="hover:bg-green-100" href="/">
                 Contact
               </Link>
             </li>
