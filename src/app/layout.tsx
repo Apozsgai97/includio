@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Roboto_Flex} from "next/font/google";
+import { DM_Sans} from "next/font/google";
 
-const tinos = Roboto_Flex({
+const tinos = DM_Sans({
   subsets: ["latin"],
 });
 

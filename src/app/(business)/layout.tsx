@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <nav className="navbar bg-violet-50">
+      <nav className="navbar bg-green-50">
         <div className="flex-1">
           <Link className="text-lg font-bold" href=".">
             Includio
@@ -12,7 +12,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
         <div className="flex-none">
           <ul className="hidden md:flex menu menu-horizontal px-1 font-bold">
             <li className="px-2">
-              <Link className="hover:bg-primary" href="/">
+              <Link className="hover:bg-primary" href="\businesses\">
                 Businesses
               </Link>
             </li>
@@ -53,21 +53,13 @@ export default function layout({ children }: { children: React.ReactNode }) {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 left-auto right-0 shadow"
             >
               <li>
-                <Link
-                  href="/"
-                >
-                  Businesses
-                </Link>
+                <Link href="/">\businesses\</Link>
               </li>
               <li>
-                <Link href="/">
-                  Index
-                </Link>
+                <Link href="/">Index</Link>
               </li>
               <li>
-                <Link href="/">
-                  Contact
-                </Link>
+                <Link href="/">Contact</Link>
               </li>
             </ul>
           </div>
