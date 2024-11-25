@@ -8,6 +8,7 @@ export type Business = {
     email: string;
   };
   category: string;
+  image: string;
 };
 
 const businesses: Business[] = [
@@ -22,6 +23,7 @@ const businesses: Business[] = [
       email: "contact@harmonybites.se",
     },
     category: "Restaurants and Cafes",
+    image: "/restaurant1.png",
   },
   {
     id: "b4e2c3d4-9c6f-46d4-a82e-2f2f2e2f2e2e",
@@ -34,6 +36,7 @@ const businesses: Business[] = [
       email: "hello@cozybean.se",
     },
     category: "Restaurants and Cafes",
+    image: "/cafe1.jpg",
   },
   {
     id: "c5f3d4e5-0d7a-47e5-b92f-3f3f3e3f3e3e",
@@ -46,6 +49,7 @@ const businesses: Business[] = [
       email: "info@thegreenfork.se",
     },
     category: "Restaurants and Cafes",
+    image: "/restaurant2.jpg",
   },
 ];
 
