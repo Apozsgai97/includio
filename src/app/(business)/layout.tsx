@@ -1,4 +1,4 @@
-import { Nav } from "@/features/business/components/nav";
+import { Nav } from "@/features";
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (

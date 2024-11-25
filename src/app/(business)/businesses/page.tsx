@@ -1,5 +1,4 @@
-import { BusinessCard } from "@/features/business/components/buisness-card";
-import { HeroBusiness } from "@/features/business/components/hero-business";
+import { BusinessCard, HeroBusiness } from "@/features";
 export default function Page() {
   return (
     <>
