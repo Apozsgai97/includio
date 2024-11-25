@@ -19,7 +19,7 @@ export function BusinessCard({business}: Props) {
         <h2 className="card-title">{business.name}</h2>
         <p>{business.description}</p>
         <div className="card-actions justify-end mt-3">
-          <button className="btn btn-secondary h-14 text-base rounded-lg">
+          <button className="btn bg-emerald-900 h-14 text-slate-50 hover:bg-emerald-800 rounded-lg">
             Read More
           </button>
         </div>
