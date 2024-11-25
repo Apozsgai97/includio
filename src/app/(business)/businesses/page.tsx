@@ -1,6 +1,10 @@
 import { BusinessCard, HeroBusiness } from "@/features";
-export default function Page() {
-  return (
+import { businessFeature } from "@/features/business/instance";
+export default async function Page() {
+  
+ const businesses = await businessFeature.service.getAllElections()
+ 
+ return (
     <>
       <HeroBusiness/>
       <section className="flex flex-col justify-center items-center mt-12 bg-green-50 py-6 pt-12">
@@ -8,9 +12,9 @@ export default function Page() {
         <button className="btn btn-secondary h-14 text-base rounded-lg flex items-center">
           <span className="mr-1 text-lg">+</span>Add a new business
         </button>
-        <BusinessCard />
-        <BusinessCard />
-        <BusinessCard />
+        {businesses.map((business) => (
+         <BusinessCard key={business.id} business={business}/>
+        ))}
       </section>
     </>
   );
