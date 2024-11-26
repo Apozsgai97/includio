@@ -7,7 +7,7 @@ export default async function Page() {
  const businesses = await businessFeature.service.getAllElections()
  
  return (
-    <>
+    <div className="w-full">
       <HeroBusiness/>
       <section className="flex flex-col justify-center items-center mt-12 bg-green-50 py-6 pt-12">
         <h2 className="text-4xl font-bold mb-6">Your Businesses</h2>
@@ -19,6 +19,6 @@ export default async function Page() {
          <BusinessCard key={business.id} business={business}/>
         ))}
       </section>
-    </>
+    </div>
   );
 }
