@@ -3,7 +3,7 @@ export default async function Page() {
     <section className="flex flex-col justify-center items-center">
       <form
         action=""
-        className="flex flex-col justify-center items-center p-8 w-full shadow-xl md:w-6/12 my-12 rounded-lg border-accent border-2"
+        className="flex flex-col justify-center items-center p-8 w-full md:shadow-xl md:w-6/12 md:my-12 my-4 md:rounded-lg md:border-accent md:border-2"
         aria-labelledby="form-title"
       >
         <h1 id="form-title" className="text-2xl font-bold mb-4 text-center">
@@ -107,7 +107,7 @@ export default async function Page() {
             type="tel"
             id="telephone"
             name="telephone"
-            placeholder="+46 8 123 4567"
+            placeholder="+46 70 123 4567"
             className="input input-bordered input-accent w-full bg-slate-50 rounded-lg"
             required
             pattern="^\+?[0-9]{1,4}?[-.●]?[0-9]{1,14}(?:x.+)?$"
