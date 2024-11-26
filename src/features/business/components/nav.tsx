@@ -16,7 +16,7 @@ export function Nav(){
            </Link>
          </li>
          <li>
-           <Link className="hover:bg-green-100 rounded-lg" href="/">
+           <Link className="hover:bg-green-100 rounded-lg" href="\businesses\index">
              Index
            </Link>
          </li>
