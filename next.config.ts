@@ -1,13 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  images: {
+   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "images.unsplash.com",
-        pathname: "/photo-*/**",
-        
+        hostname: "utfs.io",
+        pathname: "/a/<APP_ID>/*",
       },
     ],
   },
