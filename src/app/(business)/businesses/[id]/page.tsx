@@ -5,7 +5,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
   console.log(id);
 
   return (
-    <div className="container mx-auto max-w-4xl rounded-lg shadow-md md:m-6 mb-6">
+    <div className="container mx-auto max-w-4xl rounded-lg shadow-md md:m-6">
       <section className="flex flex-col sm:flex-row items-center gap-8 pb-6 md:pb-0 rounded-t-lg bg-emerald-50">
         <Image
           src="/restaurant1.png"
@@ -63,8 +63,8 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
           </div>
         </article>
       </section>
-      <section className=" flex flex-col justify-center items-center p-8 bg-emerald-50">
-        <div className="w-11/12 shadow-md p-6 flex flex-col justify-center items-center rounded-lg bg-white">
+      <section className=" flex flex-col justify-center items-center md:p-8 bg-emerald-50">
+        <div className="md:w-11/12 w-full shadow-md p-6 flex flex-col justify-center items-center rounded-lg md:bg-white bg-emerald-50">
         <h2 className="text-3xl font-bold text-gray-800 text-center">
           Accessibility
         </h2>

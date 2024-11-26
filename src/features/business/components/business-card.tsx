@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Business } from "../repository";
+import Link from "next/link";
 
 type Props = {
   business: Business
@@ -19,9 +20,12 @@ export function BusinessCard({business}: Props) {
         <h2 className="card-title">{business.name}</h2>
         <p>{business.description}</p>
         <div className="card-actions justify-end mt-3">
-          <button className="btn bg-emerald-900 h-14 text-slate-50 hover:bg-emerald-800 rounded-lg">
-            Read More
-          </button>
+          <Link
+            href={`/businesses/${business.id}`}
+            className="btn bg-emerald-900 h-14 text-slate-50 hover:bg-emerald-800 rounded-lg"
+          >
+            Read more
+          </Link>
         </div>
       </div>
     </div>
