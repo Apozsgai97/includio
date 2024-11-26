@@ -1,6 +1,6 @@
 export default async function Page() {
   return (
-    <div className="max-w-4xl pb-10">
+    <div className="max-w-4xl pb-10 p-4">
       <h1 className="text-4xl font-bold text-gray-800 mt-12 text-center pb-8">
         Accessibility Index
       </h1>

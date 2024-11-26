@@ -22,7 +22,7 @@ export function BusinessCard({business}: Props) {
         <div className="card-actions justify-end mt-3">
           <Link
             href={`/businesses/${business.id}`}
-            className="btn bg-emerald-900 h-14 text-slate-50 hover:bg-emerald-800 rounded-lg"
+            className="btn bg-emerald-900 h-14 text-lg text-slate-50 hover:bg-emerald-800 rounded-lg"
           >
             Read more
           </Link>
