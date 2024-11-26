@@ -14,7 +14,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
           src={business.image}
           width={300}
           height={300}
-          alt="Picture of the slow chat application"
+          alt={`Picture of ${business.name}`}
           className="pt-0 md:mt-0 md:rounded-tl-lg  w-full md:h-96 md:w-96 object-cover"
         />
         <div className="text-center md:text-left w-full px-10">

@@ -14,7 +14,7 @@ export function HeroBusiness() {
             src="/accessible_restaurant.png"
             width={400}
             height={400}
-            alt="Picture of the slow chat application"
+            alt="Three women are eating in a restaurant and one of them is in a wheelchair."
             className="md:ml-10 pt-0 mt-6 md:mt-0 shadow-2xl rounded-lg"
           />
         </div>
