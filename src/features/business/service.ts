@@ -29,5 +29,8 @@ export function createBusinessService(repository: Repository) {
       };
       repository.addBusiness(business);
     },
+    async getBusinessById(id: string){
+      return await repository.getBusinessById(id);
+    }
   };
 }

@@ -61,6 +61,12 @@ export function createBusinessRepository() {
     async addBusiness(business: Business) {
       businesses.push(business);
     },
+    async getBusinessById(id: string) {
+      const business = businesses.find(
+        (business) => id === business.id
+      );
+      return business!;
+    },
   };
 }
 export type Repository = ReturnType<typeof createBusinessRepository>;
