@@ -1,5 +1,6 @@
 import { BusinessCard, HeroBusiness } from "@/features";
 import { businessFeature } from "@/features/business/instance";
+
 export default async function Page() {
   
  const businesses = await businessFeature.service.getAllElections()
