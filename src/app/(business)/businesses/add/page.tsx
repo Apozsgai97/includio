@@ -1,5 +1,6 @@
 "use client"
 
+import { addBusiness } from "@/features/business/action";
 import { UploadButton } from "@/utils/uploadthing";
 
 export default function Page() {
@@ -7,7 +8,7 @@ export default function Page() {
     <>
       <section className="flex flex-col justify-center items-center">
         <form
-          action=""
+          action={addBusiness}
           className="flex flex-col justify-center items-center p-8 w-full md:shadow-xl md:w-6/12 md:my-12 my-4 md:rounded-lg md:border-accent md:border-2"
           aria-labelledby="form-title"
         >
@@ -122,7 +123,6 @@ export default function Page() {
               placeholder="+46 70 123 4567"
               className="input input-bordered input-accent w-full bg-slate-50 rounded-lg"
               required
-              pattern="^\+?[0-9]{1,4}?[-.●]?[0-9]{1,14}(?:x.+)?$"
             />
           </fieldset>
           <fieldset className="w-full max-w-xl mb-6">

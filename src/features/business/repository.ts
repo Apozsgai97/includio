@@ -58,6 +58,9 @@ export function createBusinessRepository() {
     async getAllBusinesses() {
       return businesses;
     },
+    async addBusiness(business: Business) {
+      businesses.push(business);
+    },
   };
 }
 export type Repository = ReturnType<typeof createBusinessRepository>;
