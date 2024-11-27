@@ -24,9 +24,10 @@ export type AccessibilityIndex = {
   ceilingLift: string;
   space: string;
   restroomAccess: string;
-  insideStairs: string;
+  insideStairs: string; 
   tables: string;
   dog: string;
+  score: number,
 };
 
 const businesses: Business[] = [
@@ -88,6 +89,7 @@ const accessibilityIndexes: AccessibilityIndex[] = [
     insideStairs: "yes",
     tables: "yes",
     dog: "no",
+    score: 61,
   },
   {
     id: "927f7f67-8bc4-404c-b7d8-7e10cfb8db8e",
@@ -105,6 +107,7 @@ const accessibilityIndexes: AccessibilityIndex[] = [
     insideStairs: "no",
     tables: "no",
     dog: "yes",
+    score: 39,
   },
   {
     id: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
@@ -122,6 +125,7 @@ const accessibilityIndexes: AccessibilityIndex[] = [
     insideStairs: "no",
     tables: "yes",
     dog: "yes",
+    score: 89,
   },
 ];
 

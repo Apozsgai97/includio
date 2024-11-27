@@ -70,7 +70,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
           <article className="stats shadow my-8 w-44 border-2 border-accent">
             <div className="stat text-center p-1">
               <div className="stat-title">Score</div>
-              <div className="stat-value">0</div>
+              <div className="stat-value">{accessibilityIndex?.score}</div>
             </div>
           </article>
           <article className="flex flex-col justify-center items-center">
