@@ -12,7 +12,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
 
   return (
     <div className="container mx-auto max-w-4xl rounded-lg shadow-md md:m-6">
-      <section className="flex flex-col sm:flex-row items-center gap-8 pb-6 md:pb-0 rounded-t-lg bg-emerald-50">
+      <section className="flex flex-col sm:flex-row items-center gap-8 pb-6 md:pb-0 rounded-t-lg bg-emerald-900">
         <Image
           src={business.image}
           width={300}
@@ -21,8 +21,8 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
           className="pt-0 md:mt-0 md:rounded-tl-lg  w-full md:h-96 md:w-96 object-cover"
         />
         <div className="text-center md:text-left w-full px-10">
-          <h1 className="text-4xl font-bold text-gray-800">{business.name}</h1>
-          <p className="text-gray-600 text-lg">{business.category}</p>
+          <h1 className="text-4xl font-bold text-gray-50">{business.name}</h1>
+          <p className="text-gray-100 text-lg">{business.category}</p>
         </div>
       </section>
 

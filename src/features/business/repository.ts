@@ -140,7 +140,7 @@ export function createBusinessRepository() {
     async createIndex(accessibilityIndex: AccessibilityIndex) {
       const currentAccessibilityIndex = accessibilityIndexes.find(
         (currentAccessibilityIndex) =>
-          accessibilityIndex.id === currentAccessibilityIndex.id
+          accessibilityIndex.businessId === currentAccessibilityIndex.businessId
       );
 
       if (!currentAccessibilityIndex) {
@@ -148,10 +148,11 @@ export function createBusinessRepository() {
       } else {
         const index = accessibilityIndexes.findIndex(
           (currentAccessibilityIndex) =>
-            accessibilityIndex.id === currentAccessibilityIndex.id
+            accessibilityIndex.businessId === currentAccessibilityIndex.businessId
         );
         accessibilityIndexes[index] = accessibilityIndex;
       }
+      console.log(accessibilityIndexes);
     },
     async getAccessibilityIndexById(businessId: string) {
       const accessibilityIndex: AccessibilityIndex | undefined =
