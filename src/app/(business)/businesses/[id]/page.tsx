@@ -1,5 +1,6 @@
 import { businessFeature } from "@/features/business/instance";
 import Image from "next/image";
+import { CgCloseO } from "react-icons/cg";
 
 export default async function Page(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
@@ -74,8 +75,127 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
             <h2 className="text-xl font-semibold mb-2">
               Accessibility Features
             </h2>
-            <p>Currently, no accessible features are available.</p>
-            <button className="btn bg-emerald-900 h-14 text-slate-50 hover:bg-emerald-800 rounded-lg mt-4 w-40">
+            <div className="overflow-x-auto">
+              <table className="table">
+                <thead>
+                  <tr>
+                    <th>Features</th>
+                    <th></th>
+                    <th></th>
+                    <th>Available</th>
+                  </tr>
+                </thead>
+                <tbody className="text-base">
+                  <tr>
+                    <td>Ramp or Stairless Entry</td>
+                    <td></td>
+                    <td></td>
+                    <td className="flex justify-center items-center">
+                      <CgCloseO size={26} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Automatic Doors with Buttons</td>
+                    <td></td>
+                    <td></td>
+                    <td className="flex justify-center items-center">
+                      <CgCloseO size={26} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Accessible Parking Spot</td>
+                    <td></td>
+                    <td></td>
+                    <td className="flex justify-center items-center">
+                      <CgCloseO size={26} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Restroom has minimum dimensions of 2450mm x 2450mm</td>
+                    <td></td>
+                    <td></td>
+                    <td className="flex justify-center items-center">
+                      <CgCloseO size={26} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Restroom has grab rails</td>
+                    <td></td>
+                    <td></td>
+                    <td className="flex justify-center items-center">
+                      <CgCloseO size={26} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Restroom has emergency button</td>
+                    <td></td>
+                    <td></td>
+                    <td className="flex justify-center items-center">
+                      <CgCloseO size={26} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Restroom has a ceiling lift</td>
+                    <td></td>
+                    <td></td>
+                    <td className="flex justify-center items-center">
+                      <CgCloseO size={26} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Restroom has a shower bed</td>
+                    <td></td>
+                    <td></td>
+                    <td className="flex justify-center items-center">
+                      <CgCloseO size={26} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      The main area has a walking space of at least 2 meters
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td className="flex justify-center items-center">
+                      <CgCloseO size={26} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Easy access to restroom</td>
+                    <td></td>
+                    <td></td>
+                    <td className="flex justify-center items-center">
+                      <CgCloseO size={26} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td> No stairs or high thresholds inside</td>
+                    <td></td>
+                    <td></td>
+                    <td className="flex justify-center items-center">
+                      <CgCloseO size={26} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td> Accessible tables and reachable equipments</td>
+                    <td></td>
+                    <td></td>
+                    <td className="flex justify-center items-center">
+                      <CgCloseO size={26} />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Access for Service Dog</td>
+                    <td></td>
+                    <td></td>
+                    <td className="flex justify-center items-center">
+                      <CgCloseO size={26} />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button className="btn bg-emerald-900 h-14 text-slate-50 text-base hover:bg-emerald-800 rounded-lg mt-4 w-40">
               Edit
             </button>
           </article>

@@ -14,19 +14,31 @@ export default async function Page() {
       </h2>
       <ul>
         <li className="pl-6 pt-3">
-          <h3 className="text-lg font-semibold text-gray-800">
-            Ramp or Stairless Entry: 20 points
-          </h3>
-          <p>
-            Ensures wheelchair users and those with mobility aids can enter the
-            building safely.
-          </p>
+          <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" defaultChecked />
+            <div className="collapse-title text-xl font-medium">
+              Ramp or Stairless Entry -{" "}
+              <span className="font-bold">20 points</span>
+            </div>
+            <div className="collapse-content">
+              <p>
+                Ensures wheelchair users and those with mobility aids can enter
+                the building safely.
+              </p>
+            </div>
+          </div>
         </li>
         <li className="pl-6 pt-3">
-          <h3 className="text-lg font-semibold text-gray-800">
-            Automatic Doors with Buttons: 10 points
-          </h3>
-          <p>Reduces physical effort, making entry easier for everyone.</p>
+          <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" defaultChecked />
+            <div className="collapse-title text-xl font-medium">
+              Automatic Doors with Buttons -{" "}
+              <span className="font-bold">10 points</span>
+            </div>
+            <div className="collapse-content">
+              <p>Reduces physical effort, making entry easier for everyone.</p>
+            </div>
+          </div>
         </li>
       </ul>
       <h2 className="text-2xl font-bold text-gray-800 pt-8">
@@ -34,12 +46,19 @@ export default async function Page() {
       </h2>
       <ul>
         <li className="pl-6 pt-3">
-          <h3 className="text-lg font-semibold text-gray-800">
-            Accessible Parking Spot: 10 points
-          </h3>
-          <p>
-            Provides nearby parking for individuals with mobility challenges.
-          </p>
+          <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" defaultChecked />
+            <div className="collapse-title text-xl font-medium">
+              Accessible Parking Spot -{" "}
+              <span className="font-bold">10 points</span>
+            </div>
+            <div className="collapse-content">
+              <p>
+                Provides nearby parking for individuals with mobility
+                challenges.
+              </p>
+            </div>
+          </div>
         </li>
       </ul>
       <h2 className="text-2xl font-bold text-gray-800 pt-8">
@@ -47,37 +66,63 @@ export default async function Page() {
       </h2>
       <ul>
         <li className="pl-6 pt-3">
-          <h3 className="text-lg font-semibold text-gray-800">
-            Minimum dimensions of 2450mm x 2450mm: 6 points
-          </h3>
-          <p>Allows enough space for wheelchairs and assistance.</p>
+          <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" defaultChecked />
+            <div className="collapse-title text-xl font-medium">
+              Minimum dimensions of 2450mm x 2450mm -{" "}
+              <span className="font-bold">6 points</span>
+            </div>
+            <div className="collapse-content">
+              <p>Allows enough space for wheelchairs and assistance.</p>
+            </div>
+          </div>
         </li>
         <li className="pl-6 pt-3">
-          <h3 className="text-lg font-semibold text-gray-800">
-            Grab rails: 4 points
-          </h3>
-          <p>Provides support and stability.</p>
+          <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" defaultChecked />
+            <div className="collapse-title text-xl font-medium">
+              Grab rails - <span className="font-bold">4 points</span>
+            </div>
+            <div className="collapse-content">
+              <p>Provides support and stability.</p>
+            </div>
+          </div>
         </li>
         <li className="pl-6 pt-3">
-          <h3 className="text-lg font-semibold text-gray-800">
-            Emergency button: 4 points
-          </h3>
-          <p>Ensures help can be summoned in case of accidents.</p>
+          <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" defaultChecked />
+            <div className="collapse-title text-xl font-medium">
+              Emergency button - <span className="font-bold">4 points</span>
+            </div>
+            <div className="collapse-content">
+              <p>Ensures help can be summoned in case of accidents.</p>
+            </div>
+          </div>
         </li>
         <li className="pl-6 pt-3">
-          <h3 className="text-lg font-semibold text-gray-800">
-            Ceiling lift: 4 points
-          </h3>
-          <p>
-            Assists individuals who need help transitioning from their
-            wheelchair.
-          </p>
+          <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" defaultChecked />
+            <div className="collapse-title text-xl font-medium">
+              Ceiling lift - <span className="font-bold">4 points</span>
+            </div>
+            <div className="collapse-content">
+              <p>
+                Assists individuals who need help transitioning from their
+                wheelchair.
+              </p>
+            </div>
+          </div>
         </li>
         <li className="pl-6 pt-3">
-          <h3 className="text-lg font-semibold text-gray-800">
-            Shower bed: 2 points
-          </h3>
-          <p>Accommodates those needing to lay down to change.</p>
+          <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" defaultChecked />
+            <div className="collapse-title text-xl font-medium">
+              Shower bed - <span className="font-bold">2 points</span>
+            </div>
+            <div className="collapse-content">
+              <p>Accommodates those needing to lay down to change.</p>
+            </div>
+          </div>
         </li>
       </ul>
       <h2 className="text-2xl font-bold text-gray-800 pt-8">
@@ -85,43 +130,74 @@ export default async function Page() {
       </h2>
       <ul>
         <li className="pl-6 pt-3">
-          <h3 className="text-lg font-semibold text-gray-800">
-            Walking space of at least 2 meters: 10 points
-          </h3>
-          <p>Prevents obstacles and congestion.</p>
+          <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" defaultChecked />
+            <div className="collapse-title text-xl font-medium">
+              Walking space of at least 2 meters -{" "}
+              <span className="font-bold">10 points</span>
+            </div>
+            <div className="collapse-content">
+              <p>Prevents obstacles and congestion.</p>
+            </div>
+          </div>
         </li>
         <li className="pl-6 pt-3">
-          <h3 className="text-lg font-semibold text-gray-800">
-            Easy access to restrooms: 5 points
-          </h3>
-          <p>Reduces effort for users to reach essential facilities.</p>
+          <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" defaultChecked />
+            <div className="collapse-title text-xl font-medium">
+              Easy access to restroom: -{" "}
+              <span className="font-bold">5 points</span>
+            </div>
+            <div className="collapse-content">
+              <p>Reduces effort for users to reach essential facilities.</p>
+            </div>
+          </div>
         </li>
         <li className="pl-6 pt-3">
-          <h3 className="text-lg font-semibold text-gray-800">
-            No stairs or high thresholds inside: 5 points
-          </h3>
-          <p>Eliminates barriers to movement.</p>
+          <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" defaultChecked />
+            <div className="collapse-title text-xl font-medium">
+              No stairs or high thresholds inside: -{" "}
+              <span className="font-bold">5 points</span>
+            </div>
+            <div className="collapse-content">
+              <p>Eliminates barriers to movement.</p>
+            </div>
+          </div>
         </li>
         <li className="pl-6 pt-3">
-          <h3 className="text-lg font-semibold text-gray-800">
-            Accessible tables and reachable equipments: 5 points
-          </h3>
-          <p>Ensures all customers can use the space comfortably.</p>
+          <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" defaultChecked />
+            <div className="collapse-title text-xl font-medium">
+              Accessible tables and reachable equipments: -{" "}
+              <span className="font-bold">5 points</span>
+            </div>
+            <div className="collapse-content">
+              <p>Ensures all customers can use the space comfortably.</p>
+            </div>
+          </div>
         </li>
       </ul>
       <h2 className="text-2xl font-bold text-gray-800 pt-8">Service Dog</h2>
       <ul>
         <li className="pl-6 pt-3">
-          <h3 className="text-lg font-semibold text-gray-800">
-            Access for Service Dogs: 10 points
-          </h3>
-          <p>
-            Allows individuals with service animals to fully participate and
-            feel welcome.
-          </p>
+          <div className="collapse collapse-arrow bg-base-200 mb-4">
+            <input type="radio" name="my-accordion-2" defaultChecked />
+            <div className="collapse-title text-xl font-medium">
+              Access for Service Dogs: - <span className="font-bold">10 points</span>
+            </div>
+            <div className="collapse-content">
+              <p>
+                Allows individuals with service animals to fully participate and
+                feel welcome.
+              </p>
+            </div>
+          </div>
         </li>
       </ul>
-      <h2 className="text-2xl font-bold text-gray-800 pt-8">Total: 100 points</h2>
+      <h2 className="text-2xl font-bold text-gray-800 pt-8">
+        Total: 100 points
+      </h2>
       <p>
         Businesses can earn up to <strong>100 points</strong>. The higher the
         score, the more accessible your business is for individuals with

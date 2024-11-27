@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="hero bg-gradient-to-r from-emerald-100 to-pink-200 min-h-screen">
       <div className="hero-content text-center">
-        <div className="max-w-2xl">
+        <div className="max-w-4xl">
           <h1 className="text-7xl font-bold">Includio</h1>
           <p className="py-12 font-semibold text-lg leading-8">
             Includio bridges the gap between businesses and costumers seeking

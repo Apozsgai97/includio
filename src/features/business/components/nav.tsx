@@ -4,7 +4,7 @@ export function Nav(){
  return (
    <nav className="navbar bg-green-50">
      <div className="flex-1">
-       <Link className="text-lg font-bold" href=".">
+       <Link className="text-lg font-bold" href="/">
          Includio
        </Link>
      </div>
