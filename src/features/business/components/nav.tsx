@@ -11,12 +11,18 @@ export function Nav(){
      <div className="flex-none">
        <ul className="hidden md:flex menu menu-horizontal px-1 font-bold">
          <li className="px-2">
-           <Link className="hover:bg-green-100 rounded-lg text-base" href="\businesses\">
+           <Link
+             className="hover:bg-green-100 rounded-lg text-base"
+             href="\businesses\"
+           >
              Businesses
            </Link>
          </li>
          <li>
-           <Link className="hover:bg-green-100 rounded-lg text-base" href="\businesses\index">
+           <Link
+             className="hover:bg-green-100 rounded-lg text-base"
+             href="\businesses\index"
+           >
              Index
            </Link>
          </li>
@@ -51,7 +57,7 @@ export function Nav(){
              <Link href="\businesses\">Businesses</Link>
            </li>
            <li>
-             <Link href="/">Index</Link>
+             <Link href="\businesses\index">Index</Link>
            </li>
            <li>
              <Link href="/">Contact</Link>

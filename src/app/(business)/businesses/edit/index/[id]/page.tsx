@@ -23,14 +23,14 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
          Read more about the Accessibility Index
        </Link>
 
-       <input type="hidden" name="businessId" value={id} /> 
+       <input type="hidden" name="businessId" value={id} />
 
        <fieldset className="w-full max-w-xl mb-6">
          <legend className="text-lg font-bold mb-4">Entry Accessibility</legend>
 
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex justify-between  items-center mb-4">
            <label htmlFor="ramp"> Ramp or Stairless Entry</label>
-           <div>
+           <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
                <input
                  type="radio"
@@ -49,7 +49,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
          </div>
          <div className="flex justify-between items-center mb-4">
            <label htmlFor="doors"> Automatic Doors with Buttons</label>
-           <div>
+           <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
                <input
                  type="radio"
@@ -74,7 +74,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
 
          <div className="flex justify-between items-center mb-4">
            <label htmlFor="parking"> Accessible Parking Spot</label>
-           <div>
+           <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
                <input
                  type="radio"
@@ -98,10 +98,10 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
          </legend>
 
          <div className="flex justify-between items-center mb-4">
-           <label htmlFor="dimension">
+           <label htmlFor="dimension" className="md:max-w-72 max-w-60">
              Restroom has minimum dimensions of 2450mm x 2450mm
            </label>
-           <div>
+           <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
                <input
                  type="radio"
@@ -125,7 +125,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
          </div>
          <div className="flex justify-between items-center mb-4">
            <label htmlFor="grab-rails">Grab rails</label>
-           <div>
+           <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
                <input
                  type="radio"
@@ -149,7 +149,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
          </div>
          <div className="flex justify-between items-center mb-4">
            <label htmlFor="emergency-button">Emergency button</label>
-           <div>
+           <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
                <input
                  type="radio"
@@ -173,7 +173,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
          </div>
          <div className="flex justify-between items-center mb-4">
            <label htmlFor="shower-bed">Shower bed</label>
-           <div>
+           <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
                <input
                  type="radio"
@@ -197,7 +197,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
          </div>
          <div className="flex justify-between items-center mb-4">
            <label htmlFor="ceiling-lift">Ceiling lift</label>
-           <div>
+           <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
                <input
                  type="radio"
@@ -226,8 +226,10 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
          </legend>
 
          <div className="flex justify-between items-center mb-4">
-           <label htmlFor="space">Walking space of at least 2 meters</label>
-           <div>
+           <label htmlFor="space" className="md:max-w-72 max-w-60">
+             Walking space of at least 2 meters
+           </label>
+           <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
                <input
                  type="radio"
@@ -246,7 +248,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
          </div>
          <div className="flex justify-between items-center mb-4">
            <label htmlFor="restroom-access">Easy access to restroom</label>
-           <div>
+           <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
                <input
                  type="radio"
@@ -269,10 +271,10 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
            </div>
          </div>
          <div className="flex justify-between items-center mb-4">
-           <label htmlFor="inside-stairs">
+           <label htmlFor="inside-stairs" className="md:max-w-96 max-w-60">
              No stairs or high thresholds inside
            </label>
-           <div>
+           <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
                <input
                  type="radio"
@@ -295,10 +297,10 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
            </div>
          </div>
          <div className="flex justify-between items-center mb-4">
-           <label htmlFor="tables">
+           <label htmlFor="tables" className="md:max-w-72 max-w-60">
              Accessible tables and reachable equipments
            </label>
-           <div>
+           <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
                <input
                  type="radio"
@@ -321,7 +323,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
 
          <div className="flex justify-between items-center mb-4">
            <label htmlFor="dog"> Access for Service Dogs</label>
-           <div>
+           <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
                <input
                  type="radio"

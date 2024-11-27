@@ -78,7 +78,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
               Accessibility Features
             </h2>
             <div className="overflow-x-auto">
-              <table className="table">
+              <table className="table bg-white">
                 <thead>
                   <tr>
                     <th>Features</th>
