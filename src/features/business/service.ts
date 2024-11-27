@@ -54,6 +54,9 @@ export function createBusinessService(repository: Repository) {
       };
 
       repository.createIndex(accessibilityIndex);
+    },
+    async getAccessibilityIndexById(businessId: string){
+      return await repository.getAccessibilityIndexById(businessId);
     }
   };
 }

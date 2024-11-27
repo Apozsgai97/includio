@@ -12,23 +12,22 @@ export type Business = {
 };
 
 export type AccessibilityIndex = {
-    id: string;
-    businessId: string;
-    ramp: string;
-    doors: string;
-    parking: string;
-    dimension: string;
-    grabRails: string;
-    emergencyButton: string;
-    showerBed: string;
-    ceilingLift: string;
-    space: string;
-    restroomAccess: string;
-    insideStairs: string;
-    tables: string;
-    dog: string;
-}
-
+  id: string;
+  businessId: string;
+  ramp: string;
+  doors: string;
+  parking: string;
+  dimension: string;
+  grabRails: string;
+  emergencyButton: string;
+  showerBed: string;
+  ceilingLift: string;
+  space: string;
+  restroomAccess: string;
+  insideStairs: string;
+  tables: string;
+  dog: string;
+};
 
 const businesses: Business[] = [
   {
@@ -135,25 +134,34 @@ export function createBusinessRepository() {
       businesses.push(business);
     },
     async getBusinessById(id: string) {
-      const business = businesses.find(
-        (business) => id === business.id
-      );
+      const business = businesses.find((business) => id === business.id);
       return business!;
     },
-    async createIndex(accessibilityIndex: AccessibilityIndex){
-
-     const currentAccessibilityIndex = accessibilityIndexes.find((currentAccessibilityIndex) => accessibilityIndex.id === currentAccessibilityIndex.id);
-
-     if(!currentAccessibilityIndex){
-      accessibilityIndexes.push(accessibilityIndex);
-     } else{
-      const index = accessibilityIndexes.findIndex(
+    async createIndex(accessibilityIndex: AccessibilityIndex) {
+      const currentAccessibilityIndex = accessibilityIndexes.find(
         (currentAccessibilityIndex) =>
           accessibilityIndex.id === currentAccessibilityIndex.id
       );
-      accessibilityIndexes[index] = accessibilityIndex
-     }
-    }
+
+      if (!currentAccessibilityIndex) {
+        accessibilityIndexes.push(accessibilityIndex);
+      } else {
+        const index = accessibilityIndexes.findIndex(
+          (currentAccessibilityIndex) =>
+            accessibilityIndex.id === currentAccessibilityIndex.id
+        );
+        accessibilityIndexes[index] = accessibilityIndex;
+      }
+    },
+    async getAccessibilityIndexById(businessId: string) {
+      const accessibilityIndex: AccessibilityIndex | undefined =
+        accessibilityIndexes.find(
+          (accessibilityIndex) => accessibilityIndex.businessId === businessId
+        );
+
+      return accessibilityIndex;
+    },
   };
 }
+
 export type Repository = ReturnType<typeof createBusinessRepository>;

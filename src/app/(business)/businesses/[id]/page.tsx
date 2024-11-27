@@ -1,13 +1,14 @@
 import { businessFeature } from "@/features/business/instance";
 import Image from "next/image";
 import Link from "next/link";
-import { CgCloseO } from "react-icons/cg";
+import { CgAdd, CgCloseO } from "react-icons/cg";
 
 export default async function Page(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
   const id = params.id;
   
   const business = await businessFeature.service.getBusinessById(id)
+  const accessibilityIndex = await businessFeature.service.getAccessibilityIndexById(id)
 
   return (
     <div className="container mx-auto max-w-4xl rounded-lg shadow-md md:m-6">
@@ -92,7 +93,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                     <td></td>
                     <td></td>
                     <td className="flex justify-center items-center">
-                      <CgCloseO size={26} />
+                      {accessibilityIndex?.ramp === "yes" ? (
+                        <CgAdd size={28} color="green" />
+                      ) : (
+                        <CgCloseO size={26} color="red" />
+                      )}
                     </td>
                   </tr>
                   <tr>
@@ -100,7 +105,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                     <td></td>
                     <td></td>
                     <td className="flex justify-center items-center">
-                      <CgCloseO size={26} />
+                      {accessibilityIndex?.doors === "yes" ? (
+                        <CgAdd size={28} color="green" />
+                      ) : (
+                        <CgCloseO size={26} color="red" />
+                      )}
                     </td>
                   </tr>
                   <tr>
@@ -108,7 +117,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                     <td></td>
                     <td></td>
                     <td className="flex justify-center items-center">
-                      <CgCloseO size={26} />
+                      {accessibilityIndex?.parking === "yes" ? (
+                        <CgAdd size={28} color="green" />
+                      ) : (
+                        <CgCloseO size={26} color="red" />
+                      )}
                     </td>
                   </tr>
                   <tr>
@@ -116,7 +129,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                     <td></td>
                     <td></td>
                     <td className="flex justify-center items-center">
-                      <CgCloseO size={26} />
+                      {accessibilityIndex?.dimension === "yes" ? (
+                        <CgAdd size={28} color="green" />
+                      ) : (
+                        <CgCloseO size={26} color="red" />
+                      )}
                     </td>
                   </tr>
                   <tr>
@@ -124,7 +141,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                     <td></td>
                     <td></td>
                     <td className="flex justify-center items-center">
-                      <CgCloseO size={26} />
+                      {accessibilityIndex?.grabRails === "yes" ? (
+                        <CgAdd size={28} color="green" />
+                      ) : (
+                        <CgCloseO size={26} color="red" />
+                      )}
                     </td>
                   </tr>
                   <tr>
@@ -132,7 +153,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                     <td></td>
                     <td></td>
                     <td className="flex justify-center items-center">
-                      <CgCloseO size={26} />
+                      {accessibilityIndex?.emergencyButton === "yes" ? (
+                        <CgAdd size={28} color="green" />
+                      ) : (
+                        <CgCloseO size={26} color="red" />
+                      )}
                     </td>
                   </tr>
                   <tr>
@@ -140,7 +165,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                     <td></td>
                     <td></td>
                     <td className="flex justify-center items-center">
-                      <CgCloseO size={26} />
+                      {accessibilityIndex?.ceilingLift === "yes" ? (
+                        <CgAdd size={28} color="green" />
+                      ) : (
+                        <CgCloseO size={26} color="red" />
+                      )}
                     </td>
                   </tr>
                   <tr>
@@ -148,7 +177,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                     <td></td>
                     <td></td>
                     <td className="flex justify-center items-center">
-                      <CgCloseO size={26} />
+                      {accessibilityIndex?.showerBed === "yes" ? (
+                        <CgAdd size={28} color="green" />
+                      ) : (
+                        <CgCloseO size={26} color="red" />
+                      )}
                     </td>
                   </tr>
                   <tr>
@@ -158,7 +191,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                     <td></td>
                     <td></td>
                     <td className="flex justify-center items-center">
-                      <CgCloseO size={26} />
+                      {accessibilityIndex?.space === "yes" ? (
+                        <CgAdd size={28} color="green" />
+                      ) : (
+                        <CgCloseO size={26} color="red" />
+                      )}
                     </td>
                   </tr>
                   <tr>
@@ -166,7 +203,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                     <td></td>
                     <td></td>
                     <td className="flex justify-center items-center">
-                      <CgCloseO size={26} />
+                      {accessibilityIndex?.restroomAccess === "yes" ? (
+                        <CgAdd size={28} color="green" />
+                      ) : (
+                        <CgCloseO size={26} color="red" />
+                      )}
                     </td>
                   </tr>
                   <tr>
@@ -174,7 +215,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                     <td></td>
                     <td></td>
                     <td className="flex justify-center items-center">
-                      <CgCloseO size={26} />
+                      {accessibilityIndex?.insideStairs === "yes" ? (
+                        <CgAdd size={28} color="green" />
+                      ) : (
+                        <CgCloseO size={26} color="red" />
+                      )}
                     </td>
                   </tr>
                   <tr>
@@ -182,7 +227,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                     <td></td>
                     <td></td>
                     <td className="flex justify-center items-center">
-                      <CgCloseO size={26} />
+                      {accessibilityIndex?.tables === "yes" ? (
+                        <CgAdd size={28} color="green" />
+                      ) : (
+                        <CgCloseO size={26} color="red" />
+                      )}
                     </td>
                   </tr>
                   <tr>
@@ -190,7 +239,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                     <td></td>
                     <td></td>
                     <td className="flex justify-center items-center">
-                      <CgCloseO size={26} />
+                      {accessibilityIndex?.dog === "yes" ? (
+                        <CgAdd size={28} color="green" />
+                      ) : (
+                        <CgCloseO size={26} color="red" />
+                      )}
                     </td>
                   </tr>
                 </tbody>
