@@ -1,5 +1,6 @@
 import { businessFeature } from "@/features/business/instance";
 import Image from "next/image";
+import Link from "next/link";
 import { CgCloseO } from "react-icons/cg";
 
 export default async function Page(props: { params: Promise<{ id: string }> }) {
@@ -195,9 +196,12 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                 </tbody>
               </table>
             </div>
-            <button className="btn bg-emerald-900 h-14 text-slate-50 text-base hover:bg-emerald-800 rounded-lg mt-4 w-40">
+            <Link
+              href={`/businesses/edit/index/${business.id}`}
+              className="btn bg-emerald-900 h-14 text-slate-50 text-base hover:bg-emerald-800 rounded-lg mt-4 w-40"
+            >
               Edit
-            </button>
+            </Link>
           </article>
         </div>
       </section>

@@ -11,6 +11,25 @@ export type Business = {
   image: string;
 };
 
+export type AccessibilityIndex = {
+    id: string;
+    businessId: string;
+    ramp: string;
+    doors: string;
+    parking: string;
+    dimension: string;
+    grabRails: string;
+    emergencyButton: string;
+    showerBed: string;
+    ceilingLift: string;
+    space: string;
+    restroomAccess: string;
+    insideStairs: string;
+    tables: string;
+    dog: string;
+}
+
+
 const businesses: Business[] = [
   {
     id: "a3f1d2c7-8b6e-45c3-b82d-1f1f1e1f1f1f",
@@ -53,6 +72,60 @@ const businesses: Business[] = [
   },
 ];
 
+const accessibilityIndexes: AccessibilityIndex[] = [
+  {
+    id: "c9d4a143-1cf3-4ef8-b91d-61b12b4e2290",
+    businessId: "a3f1d2c7-8b6e-45c3-b82d-1f1f1e1f1f1f",
+    ramp: "yes",
+    doors: "no",
+    parking: "yes",
+    dimension: "no",
+    grabRails: "yes",
+    emergencyButton: "no",
+    showerBed: "yes",
+    ceilingLift: "no",
+    space: "yes",
+    restroomAccess: "no",
+    insideStairs: "yes",
+    tables: "yes",
+    dog: "no",
+  },
+  {
+    id: "927f7f67-8bc4-404c-b7d8-7e10cfb8db8e",
+    businessId: "b4e2c3d4-9c6f-46d4-a82e-2f2f2e2f2e2e",
+    ramp: "no",
+    doors: "yes",
+    parking: "no",
+    dimension: "yes",
+    grabRails: "no",
+    emergencyButton: "yes",
+    showerBed: "no",
+    ceilingLift: "yes",
+    space: "no",
+    restroomAccess: "yes",
+    insideStairs: "no",
+    tables: "no",
+    dog: "yes",
+  },
+  {
+    id: "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    businessId: "c5f3d4e5-0d7a-47e5-b92f-3f3f3e3f3e3e",
+    ramp: "yes",
+    doors: "yes",
+    parking: "yes",
+    dimension: "yes",
+    grabRails: "yes",
+    emergencyButton: "yes",
+    showerBed: "no",
+    ceilingLift: "no",
+    space: "yes",
+    restroomAccess: "yes",
+    insideStairs: "no",
+    tables: "yes",
+    dog: "yes",
+  },
+];
+
 export function createBusinessRepository() {
   return {
     async getAllBusinesses() {
@@ -67,6 +140,20 @@ export function createBusinessRepository() {
       );
       return business!;
     },
+    async createIndex(accessibilityIndex: AccessibilityIndex){
+
+     const currentAccessibilityIndex = accessibilityIndexes.find((currentAccessibilityIndex) => accessibilityIndex.id === currentAccessibilityIndex.id);
+
+     if(!currentAccessibilityIndex){
+      accessibilityIndexes.push(accessibilityIndex);
+     } else{
+      const index = accessibilityIndexes.findIndex(
+        (currentAccessibilityIndex) =>
+          accessibilityIndex.id === currentAccessibilityIndex.id
+      );
+      accessibilityIndexes[index] = accessibilityIndex
+     }
+    }
   };
 }
 export type Repository = ReturnType<typeof createBusinessRepository>;

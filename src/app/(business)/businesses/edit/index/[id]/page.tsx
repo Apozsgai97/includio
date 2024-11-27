@@ -1,3 +1,4 @@
+import { createAccessibilityIndex } from "@/features/business/action";
 import Link from "next/link";
 
 export default async function Page(props: { params: Promise<{ id: string }> }) {
@@ -7,7 +8,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
  return (
    <section className="flex flex-col justify-center items-center md:w-6/12">
      <form
-       action={"addBusiness"}
+       action={createAccessibilityIndex}
        className="flex flex-col justify-center items-center p-8 w-full md:shadow-xl md:my-12 my-4 md:rounded-lg md:border-accent md:border-2"
        aria-labelledby="form-title"
      >
@@ -21,6 +22,8 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
          {" "}
          Read more about the Accessibility Index
        </Link>
+
+       <input type="hidden" name="businessId" value={id} /> 
 
        <fieldset className="w-full max-w-xl mb-6">
          <legend className="text-lg font-bold mb-4">Entry Accessibility</legend>
@@ -345,7 +348,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
        </button>
      </form>
    </section>
- );
+ ); 
  
  
  }

@@ -1,4 +1,5 @@
-import { Business, Repository } from "./repository";
+import { AccessibilityData } from "./action";
+import { AccessibilityIndex, Business, Repository } from "./repository";
 import { v4 as uuidv4 } from "uuid";
 
 export function createBusinessService(repository: Repository) {
@@ -31,6 +32,28 @@ export function createBusinessService(repository: Repository) {
     },
     async getBusinessById(id: string){
       return await repository.getBusinessById(id);
+    },
+    async createAccessibilityIndex(accessibilityData: AccessibilityData, businessId:string){
+      const id = uuidv4();
+      const accessibilityIndex: AccessibilityIndex = {
+        id: id,
+        businessId: businessId,
+        ramp: accessibilityData.ramp,
+        doors: accessibilityData.doors,
+        parking: accessibilityData.parking,
+        dimension: accessibilityData.dimension,
+        grabRails: accessibilityData.grabRails,
+        emergencyButton: accessibilityData.emergencyButton,
+        showerBed: accessibilityData.showerBed,
+        ceilingLift: accessibilityData.ceilingLift,
+        space: accessibilityData.space,
+        restroomAccess: accessibilityData.restroomAccess,
+        insideStairs: accessibilityData.insideStairs,
+        tables: accessibilityData.tables,
+        dog: accessibilityData.dog,
+      };
+
+      repository.createIndex(accessibilityIndex);
     }
   };
 }
