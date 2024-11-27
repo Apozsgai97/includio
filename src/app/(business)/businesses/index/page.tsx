@@ -170,7 +170,7 @@ export default async function Page() {
             <input type="radio" name="my-accordion-2" defaultChecked />
             <div className="collapse-title text-xl font-medium">
               Accessible tables and reachable equipments: -{" "}
-              <span className="font-bold">5 points</span>
+              <span className="font-bold">10 points</span>
             </div>
             <div className="collapse-content">
               <p>Ensures all customers can use the space comfortably.</p>

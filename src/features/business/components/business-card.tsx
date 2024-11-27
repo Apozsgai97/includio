@@ -13,7 +13,7 @@ export function BusinessCard({business}: Props) {
         src={business.image}
         width={300}
         height={300}
-        alt={`Picture of ${business.name}`}
+        alt={`${business.name}`}
         className="pt-0 md:mt-0 shadow-2xl rounded-t-lg md:rounded-tr-none md:rounded-l-lg  h-80 w-80 object-cover"
       />
       <div className="card-body">
