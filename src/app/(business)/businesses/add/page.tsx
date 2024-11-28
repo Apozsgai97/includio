@@ -9,7 +9,7 @@ export default function Page() {
       <section className="flex flex-col justify-center items-center md:w-6/12">
         <form
           action={addBusiness}
-          className="flex flex-col justify-center items-center p-8 w-full md:shadow-xl md:my-12 my-4 md:rounded-lg md:border-accent md:border-2"
+          className="flex flex-col justify-center items-center p-8 w-full md:shadow-xl md:my-12 my-4 md:rounded-lg md:border-accent md:border-2 prose"
           aria-labelledby="form-title"
         >
           <h1 id="form-title" className="text-2xl font-bold mb-4 text-center">

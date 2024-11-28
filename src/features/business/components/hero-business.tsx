@@ -4,9 +4,9 @@ export function HeroBusiness() {
     <>
       <section className="hero p-4">
         <div className="hero-content flex flex-col text-center md:flex-row">
-          <div className="max-w-md">
+          <div className="prose max-w-md">
             <h1 className="text-5xl font-bold"> Welcome to Includio!</h1>
-            <p className="py-6  text-2xl mt-4">
+            <p className="py-6  text-2xl mt-2">
               Inclusion Made Easy for Businesses
             </p>
           </div>

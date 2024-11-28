@@ -29,7 +29,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
       </section>
 
       <section className="flex flex-col lg:flex-row gap-6 py-6">
-        <article className="max-w-96 md:w-96 ">
+        <article className="prose max-w-96 md:w-96 ">
           <h2 className="text-2xl font-semibold text-gray-800 mb-2 pl-4">
             Location
           </h2>
@@ -45,7 +45,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
           </div>
         </article>
         <article className="flex flex-col flex-1 justify-start md:px-12 p-4 md:py-0">
-          <div>
+          <div className="prose">
             <h2 className="text-2xl font-semibold text-gray-800 mb-2">About</h2>
             <p className="text-gray-700 mb-4">{business.description}</p>
           </div>
@@ -69,14 +69,14 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
           <h2 className="text-3xl font-bold text-gray-800 text-center">
             Accessibility
           </h2>
-          <article className="stats shadow my-8 w-44 border-2 border-accent">
+          <article className="prose stats shadow my-8 w-44 border-2 border-accent">
             <div className="stat text-center p-1">
               <div className="stat-title">Score</div>
               <div className="stat-value">{accessibilityIndex?.score || 0}</div>
             </div>
           </article>
-          <article className="flex flex-col justify-center items-center">
-            <h2 className="text-xl font-semibold mb-2">
+          <article className="prose flex flex-col justify-center items-center">
+            <h2 className="text-xl font-semibold mt-2 mb-0">
               Accessibility Features
             </h2>
             <div className="overflow-x-auto">
