@@ -1,6 +1,23 @@
 import { AccessibilityData } from "./action";
-import { AccessibilityIndex, BusinessData, Repository } from "./repository";
-import { v4 as uuidv4 } from "uuid";
+import { BusinessData, Repository } from "./repository";
+
+export type AccessibilityDataWithId = {
+  businessId: string;
+  ramp: string;
+  doors: string;
+  parking: string;
+  dimension: string;
+  grabRails: string;
+  emergencyButton: string;
+  showerBed: string;
+  ceilingLift: string;
+  space: string;
+  restroomAccess: string;
+  insideStairs: string;
+  tables: string;
+  dog: string;
+  score: number;
+};
 
 export function createBusinessService(repository: Repository) {
   return {
@@ -30,10 +47,8 @@ export function createBusinessService(repository: Repository) {
       return await repository.getBusinessById(id);
     },
     async createAccessibilityIndex(accessibilityData: AccessibilityData, businessId:string){
-      const id = uuidv4();
       const score = calculateScore(accessibilityData);
-      const accessibilityIndex: AccessibilityIndex = {
-        id: id,
+      const accessibilityIndex: AccessibilityDataWithId = {
         businessId: businessId,
         ramp: accessibilityData.ramp,
         doors: accessibilityData.doors,
