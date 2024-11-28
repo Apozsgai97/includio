@@ -31,7 +31,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
        <fieldset className="w-full max-w-xl mb-6">
          <legend className="text-lg font-bold mb-4">Entry Accessibility</legend>
 
-         <div className="flex justify-between  items-center mb-4">
+         <div className="flex justify-between  items-center border-t-2 py-2 border-b-2 border-zinc-100">
            <label htmlFor="ramp"> Ramp or Stairless Entry</label>
            <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
@@ -57,7 +57,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
              </label>
            </div>
          </div>
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex justify-between items-center py-2 border-b-2 border-zinc-100">
            <label htmlFor="doors"> Automatic Doors with Buttons</label>
            <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
@@ -89,7 +89,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
            Parking accessibility
          </legend>
 
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex justify-between items-center border-t-2 py-2 border-b-2 border-zinc-100">
            <label htmlFor="parking"> Accessible Parking Spot</label>
            <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
@@ -121,7 +121,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
            Restroom Accessibility
          </legend>
 
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex justify-between items-center border-t-2 py-2 border-b-2 border-zinc-100">
            <label htmlFor="dimension" className="md:max-w-72 max-w-60">
              Restroom has minimum dimensions of 2450mm x 2450mm
            </label>
@@ -149,7 +149,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
              </label>
            </div>
          </div>
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex justify-between items-center py-2 border-b-2 border-zinc-100">
            <label htmlFor="grab-rails">Grab rails</label>
            <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
@@ -175,7 +175,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
              </label>
            </div>
          </div>
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex justify-between items-center py-2 border-b-2 border-zinc-100">
            <label htmlFor="emergency-button">Emergency button</label>
            <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
@@ -201,7 +201,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
              </label>
            </div>
          </div>
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex justify-between items-center py-2 border-b-2 border-zinc-100">
            <label htmlFor="shower-bed">Shower bed</label>
            <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
@@ -227,7 +227,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
              </label>
            </div>
          </div>
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex justify-between items-center py-2 border-b-2 border-zinc-100">
            <label htmlFor="ceiling-lift">Ceiling lift</label>
            <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
@@ -259,7 +259,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
            Main Area Accessibility
          </legend>
 
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex justify-between items-center border-t-2 py-2 border-b-2 border-zinc-100">
            <label htmlFor="space" className="md:max-w-72 max-w-60">
              Walking space of at least 2 meters
            </label>
@@ -287,7 +287,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
              </label>
            </div>
          </div>
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex justify-between items-center py-2 border-b-2 border-zinc-100">
            <label htmlFor="restroom-access">Easy access to restroom</label>
            <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">
@@ -313,7 +313,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
              </label>
            </div>
          </div>
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex justify-between items-center py-2 border-b-2 border-zinc-100">
            <label htmlFor="inside-stairs" className="md:max-w-96 max-w-60">
              No stairs or high thresholds inside
            </label>
@@ -341,7 +341,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
              </label>
            </div>
          </div>
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex justify-between items-center py-2 border-b-2 border-zinc-100">
            <label htmlFor="tables" className="md:max-w-72 max-w-60">
              Accessible tables and reachable equipments
            </label>
@@ -373,7 +373,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
        <fieldset className="w-full max-w-xl mb-6">
          <legend className="text-lg font-bold mb-4">Service Dog</legend>
 
-         <div className="flex justify-between items-center mb-4">
+         <div className="flex justify-between items-center border-t-2 py-2 border-b-2 border-zinc-100">
            <label htmlFor="dog"> Access for Service Dogs</label>
            <div className="flex flex-col justify-center items-start md:flex-row md:justify-start md:items-center">
              <label className="mr-4">

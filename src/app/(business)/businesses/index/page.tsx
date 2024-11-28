@@ -4,7 +4,7 @@ export default async function Page() {
       <h1 className="text-4xl font-bold text-gray-800 mt-12 text-center pb-8">
         Accessibility Index
       </h1>
-      <p>
+      <p className="text-gray-700">
         This index assesses a business accessibility for individuals with
         physical disabilities. Points are awarded for each feature that enhances
         access and usability.
@@ -12,7 +12,7 @@ export default async function Page() {
       <h2 className="text-2xl font-bold text-gray-800 pt-8 pb-3">
         Total: 100 points
       </h2>
-      <p className="pl-6">
+      <p className="text-gray-700">
         Businesses can earn up to <strong>100 points</strong>. The higher the
         score, the more accessible your business is for individuals with
         physical disabilities.
@@ -25,7 +25,7 @@ export default async function Page() {
           <div className="collapse collapse-arrow bg-base-200 mb-4">
             <input type="radio" name="my-accordion-2" defaultChecked />
             <div className="collapse-title text-xl font-medium">
-              Ramp or Stairless Entry {" "}
+              Ramp or Stairless Entry{" "}
               <span className="font-bold pl-4">20 points</span>
             </div>
             <div className="collapse-content">
@@ -40,7 +40,7 @@ export default async function Page() {
           <div className="collapse collapse-arrow bg-base-200 mb-4">
             <input type="radio" name="my-accordion-2" defaultChecked />
             <div className="collapse-title text-xl font-medium">
-              Automatic Doors with Buttons {" "}
+              Automatic Doors with Buttons{" "}
               <span className="font-bold pl-4">10 points</span>
             </div>
             <div className="collapse-content">
@@ -57,7 +57,7 @@ export default async function Page() {
           <div className="collapse collapse-arrow bg-base-200 mb-4">
             <input type="radio" name="my-accordion-2" defaultChecked />
             <div className="collapse-title text-xl font-medium">
-              Accessible Parking Spot {" "}
+              Accessible Parking Spot{" "}
               <span className="font-bold pl-4">10 points</span>
             </div>
             <div className="collapse-content">
@@ -77,7 +77,7 @@ export default async function Page() {
           <div className="collapse collapse-arrow bg-base-200 mb-4">
             <input type="radio" name="my-accordion-2" defaultChecked />
             <div className="collapse-title text-xl font-medium">
-              Minimum dimensions of 2450mm x 2450mm {" "}
+              Minimum dimensions of 2450mm x 2450mm{" "}
               <span className="font-bold pl-4">6 points</span>
             </div>
             <div className="collapse-content">
@@ -192,7 +192,7 @@ export default async function Page() {
           <div className="collapse collapse-arrow bg-base-200 mb-4">
             <input type="radio" name="my-accordion-2" defaultChecked />
             <div className="collapse-title text-xl font-medium">
-              Access for Service Dogs {" "}
+              Access for Service Dogs{" "}
               <span className="font-bold pl-4">10 points</span>
             </div>
             <div className="collapse-content">
