@@ -1,9 +1,12 @@
 import { createAccessibilityIndex } from "@/features/business/action";
+import { businessFeature } from "@/features/business/instance";
 import Link from "next/link";
 
 export default async function Page(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
   const id = params.id;
+
+  const accessibilityIndex = await businessFeature.service.getAccessibilityIndexById(id);
  
  return (
    <section className="flex flex-col justify-center items-center md:w-6/12">
@@ -38,11 +41,18 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  value="yes"
                  required
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.ramp === "yes"}
                />
                Yes
              </label>
              <label>
-               <input type="radio" name="ramp" value="no" className="mr-1" />
+               <input
+                 type="radio"
+                 name="ramp"
+                 value="no"
+                 className="mr-1"
+                 defaultChecked={accessibilityIndex?.ramp !== "yes"}
+               />
                No
              </label>
            </div>
@@ -57,11 +67,18 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  value="yes"
                  required
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.doors === "yes"}
                />
                Yes
              </label>
              <label>
-               <input type="radio" name="doors" value="no" className="mr-1" />
+               <input
+                 type="radio"
+                 name="doors"
+                 value="no"
+                 className="mr-1"
+                 defaultChecked={accessibilityIndex?.doors !== "yes"}
+               />
                No
              </label>
            </div>
@@ -82,11 +99,18 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  value="yes"
                  required
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.parking === "yes"}
                />
                Yes
              </label>
              <label>
-               <input type="radio" name="parking" value="no" className="mr-1" />
+               <input
+                 type="radio"
+                 name="parking"
+                 value="no"
+                 className="mr-1"
+                 defaultChecked={accessibilityIndex?.parking !== "yes"}
+               />
                No
              </label>
            </div>
@@ -109,6 +133,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  value="yes"
                  required
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.dimension === "yes"}
                />
                Yes
              </label>
@@ -118,6 +143,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  name="dimension"
                  value="no"
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.dimension !== "yes"}
                />
                No
              </label>
@@ -133,6 +159,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  value="yes"
                  required
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.grabRails === "yes"}
                />
                Yes
              </label>
@@ -142,6 +169,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  name="grab-rails"
                  value="no"
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.grabRails !== "yes"}
                />
                No
              </label>
@@ -157,6 +185,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  value="yes"
                  required
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.emergencyButton === "yes"}
                />
                Yes
              </label>
@@ -166,6 +195,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  name="emergency-button"
                  value="no"
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.emergencyButton !== "yes"}
                />
                No
              </label>
@@ -181,6 +211,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  value="yes"
                  required
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.showerBed === "yes"}
                />
                Yes
              </label>
@@ -190,6 +221,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  name="shower-bed"
                  value="no"
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.showerBed !== "yes"}
                />
                No
              </label>
@@ -205,6 +237,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  value="yes"
                  required
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.ceilingLift === "yes"}
                />
                Yes
              </label>
@@ -214,6 +247,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  name="ceiling-lift"
                  value="no"
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.ceilingLift !== "yes"}
                />
                No
              </label>
@@ -237,11 +271,18 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  value="yes"
                  required
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.space === "yes"}
                />
                Yes
              </label>
              <label>
-               <input type="radio" name="space" value="no" className="mr-1" />
+               <input
+                 type="radio"
+                 name="space"
+                 value="no"
+                 className="mr-1"
+                 defaultChecked={accessibilityIndex?.space !== "yes"}
+               />
                No
              </label>
            </div>
@@ -256,6 +297,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  value="yes"
                  required
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.restroomAccess === "yes"}
                />
                Yes
              </label>
@@ -265,6 +307,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  name="restroom-access"
                  value="no"
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.restroomAccess !== "yes"}
                />
                No
              </label>
@@ -282,6 +325,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  value="yes"
                  required
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.insideStairs === "yes"}
                />
                Yes
              </label>
@@ -291,6 +335,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  name="inside-stairs"
                  value="no"
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.insideStairs !== "yes"}
                />
                No
              </label>
@@ -308,11 +353,18 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  value="yes"
                  required
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.tables === "yes"}
                />
                Yes
              </label>
              <label>
-               <input type="radio" name="tables" value="no" className="mr-1" />
+               <input
+                 type="radio"
+                 name="tables"
+                 value="no"
+                 className="mr-1"
+                 defaultChecked={accessibilityIndex?.tables !== "yes"}
+               />
                No
              </label>
            </div>
@@ -331,11 +383,18 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
                  value="yes"
                  required
                  className="mr-1"
+                 defaultChecked={accessibilityIndex?.dog === "yes"}
                />
                Yes
              </label>
              <label>
-               <input type="radio" name="dog" value="no" className="mr-1" />
+               <input
+                 type="radio"
+                 name="dog"
+                 value="no"
+                 className="mr-1"
+                 defaultChecked={accessibilityIndex?.dog !== "yes"}
+               />
                No
              </label>
            </div>
