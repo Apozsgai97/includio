@@ -3,7 +3,7 @@ import Link from "next/link";
 export function Nav(){
  return (
    <nav className="navbar bg-green-50">
-     <div className="flex-1">
+     <div className="flex-1 pl-4">
        <Link className="text-lg font-bold" href="/">
          Includio
        </Link>

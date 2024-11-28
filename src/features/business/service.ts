@@ -40,7 +40,7 @@ export function createBusinessService(repository: Repository) {
        contact_mobile: telephone,
        contact_email: email,
        category: category,
-        image: "/restaurant2.jpg",
+        image: "/burger-king.jpg",
       };
       repository.addBusiness(business);
     },

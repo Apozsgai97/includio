@@ -1,7 +1,7 @@
 "use client"
 
 import { addBusiness } from "@/features/business/action";
-import { UploadButton } from "@/utils/uploadthing";
+//import { UploadButton } from "@/utils/uploadthing";
 
 export default function Page() {
   return (
@@ -125,7 +125,7 @@ export default function Page() {
               required
             />
           </fieldset>
-          <fieldset className="w-full max-w-xl mb-6">
+          {/* <fieldset className="w-full max-w-xl mb-6">
             <legend className="text-lg font-bold text-center mb-4">
               Add an image
             </legend>
@@ -141,7 +141,7 @@ export default function Page() {
                 alert(`ERROR! ${error.message}`);
               }}
             />
-          </fieldset>
+          </fieldset> */}
           <button
             type="submit"
             className="btn bg-emerald-900 h-14 text-slate-50 hover:bg-emerald-800 rounded-lg mt-4"
