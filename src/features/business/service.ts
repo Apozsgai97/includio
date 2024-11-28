@@ -1,5 +1,5 @@
 import { AccessibilityData } from "./action";
-import { AccessibilityIndex, Business, Repository } from "./repository";
+import { AccessibilityIndex, BusinessData, Repository } from "./repository";
 import { v4 as uuidv4 } from "uuid";
 
 export function createBusinessService(repository: Repository) {
@@ -15,9 +15,7 @@ export function createBusinessService(repository: Repository) {
       email: string,
       telephone: string
     ) {
-      const id = uuidv4();
-      const business: Business = {
-        id: id,
+      const business: BusinessData = {
         name: name,
         description: description,
         address: address,

@@ -12,6 +12,15 @@ export type Business = {
   category: string | null;
   image: string | null;
 };
+export type BusinessData = {
+  name: string;
+  description: string | null;
+  address: string;
+  contact_mobile: string;
+  contact_email: string;
+  category: string | null;
+  image: string | null;
+};
 
 export type AccessibilityIndex = {
   id: string;
@@ -130,8 +139,8 @@ export function createBusinessRepository() {
     async getAllBusinesses() {
       return await db.select().from(businessTable);
     },
-    async addBusiness(business: Business) {
-      businesses.push(business);
+    async addBusiness(business: BusinessData) {
+      await db.insert(businessTable).values(business)
     },
     async getBusinessById(id: string) {
       const business = await db
