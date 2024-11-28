@@ -15,13 +15,13 @@ export default function Home() {
           </p>
           <Link
             href={`/businesses`}
-            className="btn bg-emerald-900 h-14 text-lg text-slate-50 hover:bg-emerald-800 rounded-xl mr-12 shadow-lg"
+            className="btn bg-emerald-900 h-14 text-lg text-slate-50 hover:bg-emerald-800 rounded-xl mr-12"
           >
             Business
           </Link>
           <Link
             href={`/businesses`}
-            className="btn bg-emerald-900 h-14 text-lg text-slate-50 hover:bg-emerald-800 rounded-xl shadow-lg"
+            className="btn bg-emerald-900 h-14 text-lg text-slate-50 hover:bg-emerald-800 rounded-xl"
           >
             Costumer
           </Link>

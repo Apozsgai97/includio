@@ -27,7 +27,10 @@ export function Nav(){
            </Link>
          </li>
          <li>
-           <Link className="hover:bg-green-100 rounded-lg text-base" href="/">
+           <Link
+             className="hover:bg-green-100 rounded-lg text-base"
+             href="\businesses\contact"
+           >
              Contact
            </Link>
          </li>
@@ -60,7 +63,7 @@ export function Nav(){
              <Link href="\businesses\index">Index</Link>
            </li>
            <li>
-             <Link href="/">Contact</Link>
+             <Link href="\businesses\contact">Contact</Link>
            </li>
          </ul>
        </div>
