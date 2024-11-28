@@ -6,11 +6,13 @@ type Props = {
   business: Business
 }
 
-export function BusinessCard({business}: Props) {
+export function BusinessCard({business}: Props)
+ {
+  console.log(business.id)
   return (
     <div className="card md:card-side bg-base-100 shadow-xl mt-10 max-w-4xl flex flex-col justify-center items-center w-10/12">
       <Image
-        src={business.image}
+        src={business.image!}
         width={300}
         height={300}
         alt={`${business.name}`}

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default async function Page() {
   
- const businesses = await businessFeature.service.getAllElections()
+ const businesses = await businessFeature.service.getAllBusinesses()
  
  return (
     <div className="w-full">

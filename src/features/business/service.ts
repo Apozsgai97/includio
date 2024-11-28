@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 
 export function createBusinessService(repository: Repository) {
   return {
-    async getAllElections() {
+    async getAllBusinesses() {
       return await repository.getAllBusinesses();
     },
     async addBusiness(
@@ -21,11 +21,9 @@ export function createBusinessService(repository: Repository) {
         name: name,
         description: description,
         address: address,
-        contact: {
-          mobile: telephone,
-          email: email,
-        },
-        category: category,
+       contact_mobile: telephone,
+       contact_email: email,
+       category: category,
         image: "/restaurant2.jpg",
       };
       repository.addBusiness(business);

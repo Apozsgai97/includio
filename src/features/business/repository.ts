@@ -1,14 +1,16 @@
+import { db } from "@/db/index";
+import { businessTable } from "@/db/schema";
+import { eq } from "drizzle-orm";
+
 export type Business = {
   id: string;
   name: string;
-  description: string;
+  description: string | null;
   address: string;
-  contact: {
-    mobile: string;
-    email: string;
-  };
-  category: string;
-  image: string;
+  contact_mobile: string;
+  contact_email: string;
+  category: string | null;
+  image: string | null;
 };
 
 export type AccessibilityIndex = {
@@ -24,10 +26,10 @@ export type AccessibilityIndex = {
   ceilingLift: string;
   space: string;
   restroomAccess: string;
-  insideStairs: string; 
+  insideStairs: string;
   tables: string;
   dog: string;
-  score: number,
+  score: number;
 };
 
 const businesses: Business[] = [
@@ -37,10 +39,8 @@ const businesses: Business[] = [
     description:
       "A contemporary dining destination blending global flavors with a touch of innovation. From expertly crafted appetizers to indulgent desserts, every dish is a celebration of taste and creativity. Perfect for casual dinners or special occasions.",
     address: "Storgatan 12, 114 51 Stockholm, Sweden",
-    contact: {
-      mobile: "+46 8 123 4567",
-      email: "contact@harmonybites.se",
-    },
+    contact_mobile: "+46 8 123 4567",
+    contact_email: "contact@harmonybites.se",
     category: "Restaurants and Cafes",
     image: "/restaurant1.png",
   },
@@ -50,10 +50,8 @@ const businesses: Business[] = [
     description:
       "A delightful cafe where the aroma of freshly brewed coffee greets you at the door. Known for its rich espresso, flaky pastries, and cozy atmosphere, it’s the ideal spot for a quiet morning or catching up with friends over lattes.",
     address: "Kaffevägen 8, 111 22 Stockholm, Sweden",
-    contact: {
-      mobile: "+46 8 987 6543",
-      email: "hello@cozybean.se",
-    },
+    contact_mobile: "+46 8 987 6543",
+    contact_email: "hello@cozybean.se",
     category: "Restaurants and Cafes",
     image: "/cafe1.jpg",
   },
@@ -63,10 +61,8 @@ const businesses: Business[] = [
     description:
       "A vibrant eatery focused on farm-to-table dining, offering fresh, organic ingredients in every dish. Enjoy a menu filled with healthy yet flavorful options in a relaxed, stylish environment.",
     address: "Gröna Gatan 20, 118 60 Stockholm, Sweden",
-    contact: {
-      mobile: "+46 8 654 3210",
-      email: "info@thegreenfork.se",
-    },
+    contact_mobile: "+46 8 654 3210",
+    contact_email: "info@thegreenfork.se",
     category: "Restaurants and Cafes",
     image: "/restaurant2.jpg",
   },
@@ -132,14 +128,20 @@ const accessibilityIndexes: AccessibilityIndex[] = [
 export function createBusinessRepository() {
   return {
     async getAllBusinesses() {
-      return businesses;
+      return await db.select().from(businessTable);
     },
     async addBusiness(business: Business) {
       businesses.push(business);
     },
     async getBusinessById(id: string) {
-      const business = businesses.find((business) => id === business.id);
-      return business!;
+      const business = await db
+        .select()
+        .from(businessTable)
+        .where(eq(businessTable.id, id));
+
+        console.log(business)
+
+      return business[0];
     },
     async createIndex(accessibilityIndex: AccessibilityIndex) {
       const currentAccessibilityIndex = accessibilityIndexes.find(
@@ -152,7 +154,8 @@ export function createBusinessRepository() {
       } else {
         const index = accessibilityIndexes.findIndex(
           (currentAccessibilityIndex) =>
-            accessibilityIndex.businessId === currentAccessibilityIndex.businessId
+            accessibilityIndex.businessId ===
+            currentAccessibilityIndex.businessId
         );
         accessibilityIndexes[index] = accessibilityIndex;
       }

@@ -6,6 +6,8 @@ import { CgAdd, CgCloseO } from "react-icons/cg";
 export default async function Page(props: { params: Promise<{ id: string }> }) {
   const params = await props.params;
   const id = params.id;
+
+  console.log(id)
   
   const business = await businessFeature.service.getBusinessById(id)
   const accessibilityIndex = await businessFeature.service.getAccessibilityIndexById(id)
@@ -14,7 +16,7 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
     <div className="container mx-auto max-w-4xl rounded-lg shadow-md md:m-6">
       <section className="flex flex-col sm:flex-row items-center gap-8 pb-6 md:pb-0 rounded-t-lg bg-emerald-900">
         <Image
-          src={business.image}
+          src={business.image!}
           width={300}
           height={300}
           alt={`Picture of ${business.name}`}
@@ -53,11 +55,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
             </h2>
             <h3 className="font-semibold">E-mail</h3>
             <p className="text-gray-700 flex items-center gap-2 py-2">
-              {`📧 ${business.contact.email}`}
+              {`📧 ${business.contact_email}`}
             </p>
             <h3 className="font-semibold">Telephone number</h3>
             <p className="text-gray-700 flex items-center gap-2 py-2">
-              {`📞 ${business.contact.mobile}`}
+              {`📞 ${business.contact_mobile}`}
             </p>
           </div>
         </article>
