@@ -16,14 +16,14 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
        aria-labelledby="form-title"
      >
        <h1 id="form-title" className="text-2xl font-bold mb-4 text-center">
-         Accessibility Index
+         Accessibility Rating
        </h1>
        <Link
          href={"/businesses/index"}
          className="mb-8 font-medium text-blue-600 dark:text-blue-500 hover:underline"
        >
          {" "}
-         Read more about the Accessibility Index
+         Read more about the Accessibility Rating
        </Link>
 
        <input type="hidden" name="businessId" value={id} />

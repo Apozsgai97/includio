@@ -21,17 +21,17 @@ export function Nav(){
          <li>
            <Link
              className="hover:bg-green-100 rounded-lg text-base"
-             href="\businesses\index"
+             href="\businesses\add"
            >
-             Index
+             Add business
            </Link>
          </li>
          <li>
            <Link
              className="hover:bg-green-100 rounded-lg text-base"
-             href="\businesses\contact"
+             href="\businesses\index"
            >
-             Contact
+             Rating
            </Link>
          </li>
        </ul>
@@ -60,10 +60,10 @@ export function Nav(){
              <Link href="\businesses\">Businesses</Link>
            </li>
            <li>
-             <Link href="\businesses\index">Index</Link>
+             <Link href="\businesses\add">Add business</Link>
            </li>
            <li>
-             <Link href="\businesses\contact">Contact</Link>
+             <Link href="\businesses\index">Rating</Link>
            </li>
          </ul>
        </div>

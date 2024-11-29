@@ -2,10 +2,10 @@ export default async function Page() {
   return (
     <div className="max-w-4xl pb-10 p-4">
       <h1 className="text-4xl font-bold text-gray-800 mt-12 text-center pb-8">
-        Accessibility Index
+        Accessibility Rating
       </h1>
       <p className="text-gray-700">
-        This index assesses a business accessibility for individuals with
+        This rating assesses a business accessibility for individuals with
         physical disabilities. Points are awarded for each feature that enhances
         access and usability.
       </p>
@@ -25,7 +25,7 @@ export default async function Page() {
           <div className="collapse collapse-arrow bg-base-200 mb-4">
             <input type="radio" name="my-accordion-2" defaultChecked />
             <div className="collapse-title text-xl font-medium">
-              Ramp or Stairless Entry{" "}
+              Ramp or stairless entry{" "}
               <span className="font-bold pl-4">20 points</span>
             </div>
             <div className="collapse-content">
@@ -40,7 +40,7 @@ export default async function Page() {
           <div className="collapse collapse-arrow bg-base-200 mb-4">
             <input type="radio" name="my-accordion-2" defaultChecked />
             <div className="collapse-title text-xl font-medium">
-              Automatic Doors with Buttons{" "}
+              Automatic doors with buttons{" "}
               <span className="font-bold pl-4">10 points</span>
             </div>
             <div className="collapse-content">
@@ -57,7 +57,7 @@ export default async function Page() {
           <div className="collapse collapse-arrow bg-base-200 mb-4">
             <input type="radio" name="my-accordion-2" defaultChecked />
             <div className="collapse-title text-xl font-medium">
-              Accessible Parking Spot{" "}
+              Accessible parking spot{" "}
               <span className="font-bold pl-4">10 points</span>
             </div>
             <div className="collapse-content">
@@ -192,7 +192,7 @@ export default async function Page() {
           <div className="collapse collapse-arrow bg-base-200 mb-4">
             <input type="radio" name="my-accordion-2" defaultChecked />
             <div className="collapse-title text-xl font-medium">
-              Access for Service Dogs{" "}
+              Access for service dogs{" "}
               <span className="font-bold pl-4">10 points</span>
             </div>
             <div className="collapse-content">
