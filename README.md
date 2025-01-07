@@ -1,8 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Includio
 
-## Getting Started
+Includio is an accessible platform designed to connect clients with businesses based on their accessibility features. It allows users to search for accessible places, add new accessible locations, rate their accessibility, and provide feedback to businesses. Businesses can assess their accessibility, receive improvement suggestions, and notify clients when updates are made. 
 
-First, run the development server:
+My big picture plan:
+<img src="public/Screenshot 2024-12-02 at 09.50.18.png" alt="Big Picture Plan">
+
+<a href="https://github.com/users/Apozsgai97/projects/6"> Check out my planning board for the project!</a>
+
+
+## Upcoming Features
+
+- **Search for Accessible Places:** Users can search for businesses based on accessibility features.
+- **Add New Places:** Clients can add new accessible places they discover and contribute to the community.
+- **Rate Accessibility:** Users can rate places based on various accessibility features.
+- **Feedback and Suggestions:** Users can leave suggestions for businesses to improve their accessibility.
+- **Business Profiles:** Businesses can assess their accessibility, receive client feedback, and track suggested improvements.
+- **Notification System:** Clients are notified when a business they follow makes improvements to accessibility.
+- **Favorite Places List:** Users can create a list of favorite accessible places with comments.
+
+## Tech Stack
+
+- **Frontend:**
+  - Next.js
+  - React
+  - Tailwind CSS
+  - PostgreSQL
+  - Drizzle
+  - Docker (for database containerization)
+
+## Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/your-username/includio.git
+cd includio
+```
+### Install dependencies
+```bash
+npm run dev
+```
+
+### Run the development server:
 
 ```bash
 npm run dev
@@ -15,22 +54,3 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
